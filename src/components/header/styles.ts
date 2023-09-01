@@ -9,6 +9,7 @@ export const Container = styled.header`
 
   img {
     width: 100%;
+    position: static;
   }
 
   `;

@@ -1,7 +1,8 @@
 import { Header } from "../../components/header"
+import { IssueCard } from "./components/IssueCard"
 import { Profile } from "./components/Profile"
 import { SearchIssue } from "./components/SearchIssue"
-import { Container, Content } from "./styles"
+import { Container, Content, IssuesContent } from "./styles"
 
 export function Home() {
   return (
@@ -12,7 +13,17 @@ export function Home() {
         <Profile />
 
         <SearchIssue />
+
       </Content>
+
+      <IssuesContent>
+
+        <IssueCard />
+
+        <IssueCard />
+
+        <IssueCard />
+      </IssuesContent>
     </Container>
   )
 }
