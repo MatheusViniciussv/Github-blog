@@ -10,8 +10,8 @@ interface CardProps {
 
 export function IssueCard({ content, howLong, title, id }: CardProps) {
   return (
-    <NavLink to={`post/${id}`}>
-      <Container>
+    <Container>
+      <NavLink to={`post/${id}`}>
         <Head>
           <Title>{title}</Title>
           <span>{howLong}</span>
@@ -19,8 +19,8 @@ export function IssueCard({ content, howLong, title, id }: CardProps) {
         <Content>
           {content}
         </Content>
-      </Container>
-    </NavLink>
+      </NavLink>
+    </Container>
 
   )
 }

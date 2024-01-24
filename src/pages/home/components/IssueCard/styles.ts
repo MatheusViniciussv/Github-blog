@@ -8,11 +8,17 @@ export const Container = styled.div`
   border-radius: 0.625rem;
   background: ${(props) => props.theme["base-post"]};
 
+  border: 2px solid ${(props) => props.theme["base-post"]};
+
   cursor: pointer;
-  transition: transform 250ms;
-  
+  transition: border 250ms;
+
+  a {
+    text-decoration: none;
+  }
+
   &:hover {
-    transform: translateY(-10px);
+    border: 2px solid ${(props) => props.theme["base-border"]};
   }
 `;
 

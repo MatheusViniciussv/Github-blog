@@ -22,10 +22,4 @@ export const IssuesContent = styled.div`
   gap: 2rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-
-  cursor: pointer;
-  
-  a {
-    text-decoration: none;
-  }
 `;

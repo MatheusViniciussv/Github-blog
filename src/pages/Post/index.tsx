@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
-import { Container } from "./styles"
-import { Header } from "./components/header"
+import { Container, Content } from "./styles"
+import { TitleContent } from "./components/TitleContent"
+import { Header } from "../../components/header"
 
 export function Post() {
 
@@ -9,6 +10,10 @@ export function Post() {
   return (
     <Container>
       <Header />
+
+      <Content>
+        <TitleContent />
+      </Content>
 
     </Container>
   )
