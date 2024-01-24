@@ -1,11 +1,8 @@
 import styled from 'styled-components'
 
-// import CoverImage from "../../assets/Cover.svg";
-
-
 export const Container = styled.header`
   height: 18rem;
-  width: 100vw;
+  width: 100%;
 
   img {
     width: 100%;
@@ -13,4 +10,3 @@ export const Container = styled.header`
   }
 
   `;
-  /* background: url(${CoverImage}) no-repeat; */

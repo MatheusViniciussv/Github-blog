@@ -5,7 +5,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 `;
 
 export const Content = styled.div`
@@ -22,4 +21,11 @@ export const IssuesContent = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  cursor: pointer;
+  
+  a {
+    text-decoration: none;
+  }
 `;

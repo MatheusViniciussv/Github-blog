@@ -7,6 +7,13 @@ export const Container = styled.div`
   height: 16.25rem;
   border-radius: 0.625rem;
   background: ${(props) => props.theme["base-post"]};
+
+  cursor: pointer;
+  transition: transform 250ms;
+  
+  &:hover {
+    transform: translateY(-10px);
+  }
 `;
 
 export const Head = styled.div`
@@ -37,13 +44,17 @@ export const Content = styled.div`
   line-height: 1.6rem;
 
   width: 22rem;
-  height: 7rem;
 
   overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  hyphens: auto;
 
   font-size: 1rem;
   line-height: 1.6rem;
+
+  text-decoration: none;
+  color: ${(props) => props.theme["base-text"]};
 `;
