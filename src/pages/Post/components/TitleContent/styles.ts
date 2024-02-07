@@ -42,6 +42,7 @@ export const Title = styled.h3`
 
 export const Info = styled.div`
   display: flex;
+  align-items: center;
   gap: 2rem;
 
   color: ${(props) => props.theme['base-span']};
@@ -50,5 +51,10 @@ export const Info = styled.div`
     gap: 0.5rem;
     display: flex;
     align-items: center;
+  }
+
+  a {
+    color: ${(props) => props.theme["base-span"]};
+    text-decoration: none;
   }
 `;

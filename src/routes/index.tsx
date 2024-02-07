@@ -7,7 +7,7 @@ export function Router() {
     <BrowserRouter>
       <Routes>
         <Route element={<Home />} path='/' />
-        <Route element={<Post />} path='/post/:id' />
+        <Route element={<Post />} path='/post/:number' />
       </Routes>
     </BrowserRouter>
   )

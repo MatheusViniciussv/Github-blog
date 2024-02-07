@@ -25,10 +25,10 @@ export function Profile({ profile }: ProfileProps) {
         <TitleContent>
           <h3>{profile.name}</h3>
 
-          <Link to={profile.html_url}>
+          <a target="_blank" href={profile.html_url}>
             GITHUB
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          </Link>
+          </a>
         </TitleContent>
 
         <span>{profile.bio}</span>

@@ -11,5 +11,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   
+  gap: 2rem;
+
   width: 54rem;
 `;

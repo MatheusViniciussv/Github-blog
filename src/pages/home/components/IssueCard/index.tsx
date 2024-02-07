@@ -6,13 +6,13 @@ interface CardProps {
   title: string
   body: string
   updated_at: string
-  id: number
+  number: number
 }
 
-export function IssueCard({ body, updated_at, title, id }: CardProps) {
+export function IssueCard({ body, updated_at, title, number }: CardProps) {
   return (
     <Container>
-      <NavLink to={`post/${id}`}>
+      <NavLink to={`post/${number}`}>
         <Head>
           <Title>{title}</Title>
           <span>{FormatedDate(updated_at)}</span>
