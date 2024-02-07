@@ -27,6 +27,7 @@ export const Head = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 1rem;
 
   span {
     font-size: 0.875rem;

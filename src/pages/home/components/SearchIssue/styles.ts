@@ -24,12 +24,17 @@ export const Container = styled.div`
     padding: 0.75rem 1rem;
     font-size: 1rem;
 
-    border: 1px solid ${(props) => props.theme['base-border']};
+    border: 1px solid ${(props) => props.theme["base-border"]};
+    color: ${(props) => props.theme["base-text"]};
     background: ${(props) => props.theme["base-input"]};
     border-radius: 6px;
 
     &::placeholder {
       color: ${(props) => props.theme["base-label"]};
+    }
+
+    &:focus {
+      border: 1px solid ${(props) => props.theme["blue"]};
     }
   }
 `;

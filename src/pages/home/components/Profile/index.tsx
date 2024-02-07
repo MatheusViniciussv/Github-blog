@@ -1,24 +1,57 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Content, Social, TitleContent } from "./styles";
+import { faArrowUpRightFromSquare, faBuilding, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import Avatar from '../../../../assets/avatar.svg'
+interface ProfileProps {
+  profile: {
+    avatar_url: string;
+    login: string;
+    name: string;
+    followers: string;
+    html_url: string;
+    company: string;
+    bio: string
+  }
+}
 
-export function Profile() {
+
+export function Profile({ profile }: ProfileProps) {
   return (
     <Container>
-      <img src={Avatar} alt="" />
+      <img src={profile.avatar_url} alt="profile" />
       <Content>
         <TitleContent>
-          <h3>Cameron Williamson</h3>
+          <h3>{profile.name}</h3>
 
-          <a href="#">GITHUB</a>
+          <Link to={profile.html_url}>
+            GITHUB
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </Link>
         </TitleContent>
 
-        <span>Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.</span>
+        <span>{profile.bio}</span>
 
         <Social>
-          <span>cameronwll</span>
-          <span>rocketseat</span>
-          <span>32 seguidores</span>
+          <span>
+            <FontAwesomeIcon icon={faGithub} />
+            {profile.login}
+          </span>
+          {profile.company ? (
+            <span>
+              <FontAwesomeIcon icon={faBuilding} />
+              {profile.company}
+            </span>
+          ) : (
+            <div>
+
+            </div>
+          )}
+          <span>
+            <FontAwesomeIcon icon={faUserGroup} />
+            {`${profile.followers} seguidores`}
+          </span>
         </Social>
       </Content>
     </Container>
